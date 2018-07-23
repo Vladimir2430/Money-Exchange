@@ -1,10 +1,10 @@
 module.exports = function makeExchange(currency) {
   let obj = {},
-  x1=Math.floor((currency-currency%50)/50),
-  x2=Math.floor((currency-x1*50)/25),
-  x3=Math.floor((currency-x1*50-x2*25)/10),
-  x4=Math.floor((currency-x1*50-x2*25-x3*10)/5),
-  x5=Math.floor(currency-x1*50-x2*25-x3*10-x4*5);
+  x1 = Math.floor((currency - currency % 50) / 50),
+  x2 = Math.floor((currency - x1 * 50) / 25),
+  x3 = Math.floor((currency - x1 * 50 - x2 * 25) / 10),
+  x4 = Math.floor((currency - x1 * 50 - x2 * 25 - x3 * 10) / 5),
+  x5 = Math.floor( currency - x1 * 50 - x2 * 25 - x3 * 10 - x4 * 5);
 
   if (currency > 10000) {return {error: "You are rich, my friend! We don't have so much coins for exchange"};}
   if (x1 > 0) {obj.H = x1;}
